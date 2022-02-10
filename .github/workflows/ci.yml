@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Upload Artifacts
-        uses: @actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: osi-frontend
           path: .output
