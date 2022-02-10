@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "ignorePatterns": [],
+  "rules": {
+    "comma-dangle": [
+      "warn",
+      "always-multiline"
+    ]
+  }
+}

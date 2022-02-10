@@ -1,0 +1,27 @@
+name: NuxtJS CI
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: osi-frontend
+          path: .output
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint
