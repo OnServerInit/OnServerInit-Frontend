@@ -6,5 +6,11 @@
   "extends": [
     "@nuxtjs/eslint-config-typescript"
   ],
-  "ignorePatterns": []
+  "ignorePatterns": [],
+  "rules": {
+    "comma-dangle": [
+      "warn",
+      "always-multiline"
+    ]
+  }
 }
