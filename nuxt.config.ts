@@ -9,6 +9,6 @@ export default defineNuxtConfig({
     },
   },
   head: {
-    css: ['@/assets/css/tailwind.css'],
+    css: ['@/assets/css/tailwind.css', '@/assets/css/main.css'],
   },
 })
