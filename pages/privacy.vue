@@ -4,7 +4,9 @@
       <h1 class="font-bold leading-tight text-3xl mb-2">
         OnServerInit Privacy Policy
       </h1>
-      <p>Last Modified: 12 December, 2021</p>
+      <p class="text-slate-600">
+        Last Modified: 12 December, 2021
+      </p>
       <h2 class="font-semibold leading-tight text-2xl mt-4">
         Introduction
       </h2>
