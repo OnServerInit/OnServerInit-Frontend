@@ -19,3 +19,7 @@ body{
 .tag{
     @apply text-white p-1 rounded-md text-sm;
 }
+
+.tag-r{
+    @apply text-white p-1 px-4 rounded-full text-xs;
+}
