@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-gray-700 px-96 py-4 flex flex-col text-white"
+    class="bg-gray-700 px-[10%] py-4 flex flex-col text-white"
   >
     &#169; 2022 AnythingMC
     <NuxtLink

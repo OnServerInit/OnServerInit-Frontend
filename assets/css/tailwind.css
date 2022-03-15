@@ -7,3 +7,15 @@
         list-style: revert;
     }
 }
+
+body{
+    @apply bg-gray-600;
+}
+
+.generic-body{
+    @apply text-white bg-gray-700 p-3 rounded-lg;
+}
+
+.tag{
+    @apply text-white p-1 rounded-md text-sm;
+}

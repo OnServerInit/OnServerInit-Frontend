@@ -13,7 +13,7 @@
       </h2>
       <p>
         These terms and conditions outline the rules and regulations for the use of OnServerInit's
-        Website, located at https://onserverinit.com.
+        Website, located at <a href="https://onserverinit.com">https://onserverinit.com</a>.
       </p>
       <p>
         By accessing this website we assume you accept these terms and conditions. Do not continue to use
