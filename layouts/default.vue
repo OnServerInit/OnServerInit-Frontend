@@ -3,14 +3,14 @@
     class="flex flex-col min-h-screen"
   >
     <Header />
-    <div class="overflow-y-auto">
+    <div class="basis-0 grow">
       <div
-        class="mx-96 my-8  h-[75vh]"
+        class="ml-[50%] my-8 transform -translate-x-1/2 w-[80%]"
       >
         <slot />
       </div>
     </div>
-    <Footer class="mt-auto" />
+    <Footer class="" />
   </div>
 </template>
 <script>
