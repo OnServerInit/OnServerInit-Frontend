@@ -2,31 +2,9 @@
   <div>
     <div class="flex gap-5">
       <div class="flex flex-grow flex-col gap-4">
-        <div class="generic-body flex gap-3">
-          <img
-            src="https://via.placeholder.com/100"
-            alt=""
-            class="w-[100px] h-[100px] rounded-lg"
-          />
-
-          <div class="flex flex-col gap-1 flex-grow basis-0">
-            <div class="flex gap-2">
-              <span class="tag bg-red-500">Server Software</span>
-              <span class="tag bg-red-500">Server Software</span>
-              <span class="tag bg-red-500">Server Software</span>
-            </div>
-
-            <div class="flex flex-col flex-grow">
-              <span class="font-semibold">Plugin Title</span>
-              <span>a really cool descriptioon for an equally cool plugin. a really cool descriptioon for an equally cool plugin. a really cool descriptioon...</span>
-            </div>
-          </div>
-
-          <div class="flex flex-col w-max h-full">
-            <button class="bg-green-600 p-2 px-4 block rounded-md font-semibold">Download</button>
-            <button class="border-2 border-green-600 border-solid bg-transparent p-2 px-4 mt-auto block rounded-md font-semibold">View Plugin</button>
-          </div>
-        </div>
+        <!-- <Resource v-for="resource in resources" :name="resources.name" :id="resource.id"></Resource> -->
+        <Resource v-for="item in resources" :name="item['name']" :id="item['id']" :blurb="item['blurb']"
+                  :downloads="'0'" :logo="item['logo']"></Resource>
       </div>
 
       <div class="generic-body min-w-[25%] bg-gray-700 h-min">
@@ -45,3 +23,50 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+import Resource from "../components/Resource";
+
+export default {
+  components: {
+    Resource
+  },
+  data() {
+    return {
+      resources: []
+    };
+  },
+  async created() {
+    const config = {
+      headers: {
+        Accept: "application/json"
+      }
+    };
+
+    try {
+      const res = await axios.get('http://localhost:8080/resources', config);
+
+      for (let i = 0; i < res.data.content.length; i++) {
+        const res1 = await axios.get('http://localhost:8080/resources/' + res.data.content[i].id, config);
+        console.log(i);
+        this.resources.push(res1.data);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  head() {
+    return {
+      title: 'JustDoom Site',
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "JustDooms Site"
+        }
+      ]
+    };
+  }
+}
+</script>
