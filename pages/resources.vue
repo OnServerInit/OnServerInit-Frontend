@@ -49,7 +49,6 @@ export default {
 
       for (let i = 0; i < res.data.content.length; i++) {
         const res1 = await axios.get('http://localhost:8080/resources/' + res.data.content[i].id, config);
-        console.log(i);
         this.resources.push(res1.data);
       }
     } catch (e) {

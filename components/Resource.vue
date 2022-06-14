@@ -3,8 +3,7 @@
     <img
         v-bind:src="'data:image/jpeg;base64,' + logo"
         alt=""
-        class="w-[100px] h-[100px] rounded-lg"
-    />
+        class="w-[100px] h-[100px] rounded-lg"/>
 
     <div class="flex flex-col gap-1 flex-grow basis-0">
       <div class="flex gap-2">
@@ -21,10 +20,11 @@
 
     <div class="flex flex-col w-max h-full">
       <button class="bg-green-600 p-2 px-4 block rounded-md font-semibold">Download</button>
-      <button
+      <nuxt-link
+          :to="'/resources/' + id"
           class="border-2 border-green-600 border-solid bg-transparent p-2 px-4 mt-auto block rounded-md font-semibold">
         View Plugin
-      </button>
+      </nuxt-link>
     </div>
   </div>
 </template>

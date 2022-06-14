@@ -203,7 +203,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -214,33 +213,31 @@ import axios from "axios";
 export default {
   data() {
     return {
-      project: {},
-      description: ""
+      resource: {},
     };
   },
-  async beforeCreate() {
-    const config = {
-      headers: {
-        Accept: "application/json"
-      }
-    };
-    try {
-      // const res = await axios.get(
-      //     `https://api.imjustdoom.com/projects/${this.$route.params.id}`,
-      //     config
-      // );
-      // this.project = res.data;
-      // this.isLoaded = true;
-      // document.querySelector('head title').textContent = this.project['information'].name;
-      //
-      // this.description = window.atob(this.project['information'].description);
-    } catch (err) {
-      console.log(err);
-    }
+  async created() {
+    // const config = {
+    //   headers: {
+    //     Accept: "application/json"
+    //   }
+    // };
+    // try {
+    //   const res = await axios.get(
+    //       `https://api.imjustdoom.com/projects/${this.$route.params.id}`,
+    //       config
+    //   );
+    //   this.project = res.data;
+    //   document.querySelector('head title').textContent = this.project['information'].name;
+    //
+    //   this.description = window.atob(this.project['information'].description);
+    // } catch (err) {
+    //   console.log(err);
+    // }
   },
   head() {
     return {
-      title: "loading...",
+      title: "hmmm",
       meta: [
         {
           hid: "description",
