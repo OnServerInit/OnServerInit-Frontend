@@ -26,7 +26,7 @@
 
 <script>
 import axios from "axios";
-import Resource from "../../components/Resource";
+import Resource from "../../components/resource";
 
 export default {
   components: {
