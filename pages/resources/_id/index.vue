@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <router-view>
     <div class="flex gap-5">
       <div class="flex flex-grow flex-col gap-4">
         <div class="generic-body !bg-red-500 relative">
@@ -204,7 +204,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </router-view>
 </template>
 
 <script>
