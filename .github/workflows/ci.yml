@@ -17,11 +17,11 @@ jobs:
           name: osi-frontend
           path: .output
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: yarn install
-      - name: Lint
-        run: yarn lint
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Install dependencies
+#        run: yarn install
+#      - name: Lint
+#        run: yarn lint
