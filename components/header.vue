@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-gray-700 p-14 relative">
     <div class="ml-[50%] transform -translate-x-1/2 flex gap-7 w-[80%]">
-      <h1 class="text-white font-bold text-3xl block">OSI</h1>
+      <nuxt-link to="/"><h1 class="text-white font-bold text-3xl block">OSI</h1></nuxt-link>
 
       <div class="flex w-full rounded-md overflow-hidden">
         <input

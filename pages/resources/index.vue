@@ -57,7 +57,7 @@ export default {
   },
   head() {
     return {
-      title: 'JustDoom Site',
+      title: 'Resources',
       meta: [
         {
           hid: "description",
