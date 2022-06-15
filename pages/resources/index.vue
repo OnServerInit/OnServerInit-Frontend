@@ -2,7 +2,6 @@
   <div>
     <div class="flex gap-5">
       <div class="flex flex-grow flex-col gap-4">
-        <!-- <Resource v-for="resource in resources" :name="resources.name" :id="resource.id"></Resource> -->
         <Resource v-for="item in resources" :name="item['name']" :id="item['id']" :blurb="item['blurb']"
                   :downloads="'0'" :logo="item['logo']"></Resource>
       </div>
@@ -62,7 +61,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "JustDooms Site"
+          content: "Resources"
         }
       ]
     };

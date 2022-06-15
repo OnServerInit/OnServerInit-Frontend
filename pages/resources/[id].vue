@@ -82,15 +82,7 @@
           </div>
 
           <div class="">
-            <p class="leading-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan,
-              sapien id eleifend pharetra, risus nisi tempor dolor, sit amet pharetra justo ligula id dolor. Quisque sed
-              tellus in sapien sodales pulvinar a at nisl. Morbi hendrerit felis ac dapibus tempor. Orci varius natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam ullamcorper viverra convallis.
-              Pellentesque eget felis scelerisque, efficitur nunc feugiat, lacinia nisi. Aliquam venenatis eleifend enim
-              id dictum. Aliquam feugiat posuere dui eu gravida. Vivamus pulvinar magna vel ipsum sagittis dignissim.
-              Sed rutrum ex tincidunt malesuada interdum. Pellentesque mollis eros eget erat varius placerat.
-              Suspendisse vitae tortor convallis, tincidunt nisi et, aliquet urna. Donec feugiat, eros at venenatis
-              dignissim, dui sapien elementum lorem, vel congue nibh leo et libero.</p>
+            <p class="leading-tight">{{ this.resource.description }}</p>
           </div>
         </div>
 
@@ -191,11 +183,15 @@
         <div class="generic-body bg-gray-700 h-min">
           <h1 class="text-2xl font-semibold">Links</h1>
           <div class="flex flex-col mt-2 gap-2">
-            <div class="flex"><span class="text-xl">Source Code</span><a href=""
-                                                                         class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Github</a>
+            <div class="flex"><span class="text-xl">Source Code</span>
+              <nuxt-link :to="this.resource.source"
+                         class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Github
+              </nuxt-link>
             </div>
-            <div class="flex"><span class="text-xl">Support</span><a href=""
-                                                                     class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Discord</a>
+            <div class="flex"><span class="text-xl">Support</span>
+              <nuxt-link :to="this.resource.support"
+                         class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Discord
+              </nuxt-link>
             </div>
           </div>
         </div>
