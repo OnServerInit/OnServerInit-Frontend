@@ -2,8 +2,8 @@
   <router-view>
     <div class="flex gap-5" v-if="isLoaded">
       <div class="flex flex-grow flex-col gap-4">
-        <div class="generic-body !bg-red-500 relative">
-          <button class="absolute right-3">
+        <div class="generic-body !bg-red-500 relative" id="error">
+          <button class="absolute right-3" v-on:click="closeError">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -204,6 +204,11 @@
 import axios from "axios";
 
 export default {
+  methods: {
+    closeError() {
+      document.getElementById("error").remove();
+    }
+  },
   data() {
     return {
       isLoaded: false,
