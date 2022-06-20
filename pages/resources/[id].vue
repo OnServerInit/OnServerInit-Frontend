@@ -184,19 +184,19 @@
           <h1 class="text-2xl font-semibold">Links</h1>
           <div class="flex flex-col mt-2 gap-2">
             <div v-if="this.resource.source !== ''" class="flex"><span class="text-xl">Source Code</span>
-              <nuxt-link :to="this.resource.source"
+              <a :href="httpify(this.resource.source)"
                          class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Github
-              </nuxt-link>
+              </a>
             </div>
             <div v-if="this.resource.support !== ''" class="flex"><span class="text-xl">Support</span>
-              <nuxt-link :to="this.resource.support"
+              <a :href="httpify(this.resource.support)"
                          class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Discord
-              </nuxt-link>
+              </a>
             </div>
             <div v-if="this.resource.donation !== ''" class="flex"><span class="text-xl">Donation</span>
-              <nuxt-link :to="this.resource.donation"
+              <a :href="httpify(this.resource.donation)"
                          class="bg-green-600 p-1 px-4 block rounded-md font-semibold ml-auto">Donate
-              </nuxt-link>
+              </a>
             </div>
           </div>
         </div>
@@ -212,6 +212,12 @@ export default {
   methods: {
     closeError() {
       document.getElementById("error").remove();
+    },
+    httpify(link) {
+      if(!link.startsWith("https://") && !link.startsWith("http://")) {
+        return "http://" + link;
+      }
+      return link;
     }
   },
   data() {
