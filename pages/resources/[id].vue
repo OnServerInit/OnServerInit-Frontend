@@ -1,6 +1,6 @@
 <template>
-  <router-view>
-    <div class="flex gap-5" v-if="isLoaded">
+  <router-view v-if="isLoaded">
+    <div class="flex gap-5" v-if="this.resource.error === undefined">
       <div class="flex flex-grow flex-col gap-4">
         <div class="generic-body !bg-red-500 relative" id="error">
           <button class="absolute right-3" v-on:click="closeError">
@@ -202,13 +202,16 @@
         </div>
       </div>
     </div>
+    <error v-else :error="this.resource.error" :text="this.resource.errorText"></error>
   </router-view>
 </template>
 
 <script>
 import axios from "axios";
+import Error from "../../components/error";
 
 export default {
+  components: {Error},
   methods: {
     closeError() {
       document.getElementById("error").remove();
@@ -218,6 +221,9 @@ export default {
         return "http://" + link;
       }
       return link;
+    },
+    urlEncode(text) {
+
     }
   },
   data() {
@@ -242,7 +248,7 @@ export default {
       // TODO: "Fix ReferenceError: document is not defined" error
       document.title = "Plugin - " + this.resource.name;
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   },
   head() {
