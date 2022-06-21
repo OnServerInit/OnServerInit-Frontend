@@ -10,5 +10,8 @@ export default defineNuxtConfig({
   },
   head: {
     css: ['@/assets/css/tailwind.css', '@/assets/css/main.css'],
+  },
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   }
 })

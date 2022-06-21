@@ -60,8 +60,8 @@
           </div>
 
           <div class="flex gap-4 border-b-2 border-green-600 border-solid">
-            <a href="" class="bg-green-600 p-1 pb-2 px-4 block rounded-t-md font-semibold">Overview</a>
-            <a href="" class="p-1 pb-2 px-4 block rounded-t-md font-semibold">Updates</a>
+            <nuxt-link :to="'/resources/' + this.$route.params.id" class="bg-green-600 p-1 pb-2 px-4 block rounded-t-md font-semibold">Overview</nuxt-link>
+            <nuxt-link :to="'/resources/' + this.$route.params.id + '/updates'" class="p-1 pb-2 px-4 block rounded-t-md font-semibold">Updates</nuxt-link>
           </div>
 
           <div class="flex flex-col gap-2">
@@ -208,7 +208,7 @@
 
 <script>
 import axios from "axios";
-import Error from "../../components/error";
+import Error from "../../../components/error";
 
 export default {
   components: {Error},
