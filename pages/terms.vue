@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-2xl rounded-3xl m-5">
+  <div class="shadow-2xl rounded-3xl m-5" style="background-color: #374151">
     <div class="p-5">
       <h1 class="font-bold leading-tight text-3xl mb-2">
         OnServerInit Terms of Service
