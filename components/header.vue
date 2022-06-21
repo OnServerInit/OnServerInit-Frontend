@@ -27,9 +27,9 @@
         Resources
       </NuxtLink>
       <div class="w-[2px] bg-white block">ㅤ</div>
-      <NuxtLink class="block text-white p-1 rounded-t-md" to="/discord">
+      <a class="block text-white p-1 rounded-t-md" :href="$config.discordURL">
         Discord
-      </NuxtLink>
+      </a>
     </div>
   </nav>
   <!-- <nav
