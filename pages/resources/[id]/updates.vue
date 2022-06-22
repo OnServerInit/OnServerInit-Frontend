@@ -64,7 +64,7 @@
             <nuxt-link :to="'/resources/' + this.$route.params.id + '/updates'" class="bg-green-600 p-1 pb-2 px-4 block rounded-t-md font-semibold">Updates</nuxt-link>
           </div>
 
-          <update v-for="update in resource.updates"></update>
+          <update v-for="update in resource.updates" :id="update.id" :name="update.name" :downloads="update.downloads" :version="update.version"></update>
         </div>
       </div>
 

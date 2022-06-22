@@ -9,14 +9,14 @@
 
       <div class="flex flex-col flex-grow">
         <span class="font-semibold">{{ name }}</span>
-        <span>{{ blurb }}</span>
+        <span class="font-semibold">{{ version }}</span>
+        <span class="font-semibold">Downloads: {{ downloads }}</span>
       </div>
     </div>
 
     <div class="flex flex-col w-max h-full">
       <button class="bg-green-600 p-2 px-4 block rounded-md font-semibold">Download</button>
-      <nuxt-link
-          :to="'/resources/' + id"
+      <nuxt-link :to="'/resources/' + id"
           class="border-2 border-green-600 border-solid bg-transparent p-2 px-4 mt-auto block rounded-md font-semibold">
         View Plugin
       </nuxt-link>
@@ -27,7 +27,7 @@
 <script>
 export default {
   name: "update",
-  props: ["id", "name", 'blurb', 'downloads', 'logo']
+  props: ["id", "name", "version", 'downloads']
 };
 </script>
 
